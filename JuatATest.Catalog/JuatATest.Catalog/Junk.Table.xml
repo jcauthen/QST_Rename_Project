@@ -1,0 +1,21 @@
+﻿<TableSpec 
+	xmlns="bb_appfx_table"
+	xmlns:c="bb_appfx_commontypes" 
+	ID="cbabf6ac-2518-4998-ab1a-44ec988be0bd"
+	Name="Junk"
+	Description="Stores information about junk records"
+	Author="Boston University"
+	Tablename="USR_JUNK"		   
+	IsBuiltIn="false"
+	>
+
+	<!-- define fields on the table -->
+	<Fields>
+    <BooleanField Name="ISHOTDAY" Description="Man it's hot today!"/>
+    <ComputedColumnField Name="DESC" Expression="case ISHOTDAY when 1 then 'It's a Hot One!' else 'Sweet, as long as it aint cold!'" Description="Summary"/>
+    <DateField Name="CREATEDATE" Description="Today"/>
+    <SequenceField Name="SEQUENCE" Description="Order"/>
+    <TextField Name="NOTES" Length="500" Description="Anything"/>
+	</Fields>
+
+</TableSpec>
