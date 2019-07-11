@@ -11,6 +11,7 @@
 
 	<!-- define fields on the table -->
 	<Fields>
+    <ForeignKeyField Name="CONSTITUENTID" ForeignTable="CONSTITUENT" OnDelete="CascadeDelete" Required="true" Description="Owner" />
     <BooleanField Name="ISHOTDAY" Description="Man it's hot today!"/>
     <ComputedColumnField Name="DESC" Expression="case ISHOTDAY when 1 then 'It's a Hot One!' else 'Sweet, as long as it aint cold!'" Description="Summary"/>
     <DateField Name="CREATEDATE" Description="Today"/>
